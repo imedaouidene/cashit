@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fff">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        android:id="@+id/signupuseremail"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/email_outline"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/password"
+        android:id="@+id/signupuserpassword"
+        android:drawableLeft="@drawable/lock_outline"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:id="@+id/signupuserpassword2"
+        android:drawableLeft="@drawable/lock_outline"
+        />
+
+    <Button
+
+        android:textColor="@color/white"
+        android:layout_width="181dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/signupbutton"
+        android:text="@string/login"
+        android:layout_marginTop="35dp"
+        android:textSize="16dp"
+        android:background="@color/orange"
+        android:layout_marginBottom="30dp"
+
+        />
+
+
+
+</LinearLayout>
