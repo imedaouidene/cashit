@@ -1,12 +1,10 @@
 package com.z2p.devops.cashit;
 
-import android.content.Context;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -121,24 +119,22 @@ public class Login extends AppCompatActivity {
 
     private void showsignup() {
 
-        AlertDialog.Builder mybuilder  = new AlertDialog.Builder(getApplicationContext());
-
-        LayoutInflater inflater = (LayoutInflater)getApplicationContext().getSystemService (Context.LAYOUT_INFLATER_SERVICE) ;
-        View view= inflater.inflate(R.layout.signup,null) ;
-        mybuilder.setView(view) ;
-
-
-        signup_button = (Button)view.findViewById(R.id.signupbutton) ;
-        signup_password = (EditText)view.findViewById(R.id.signupuserpassword) ;
-        signup_password2 = (EditText)view.findViewById(R.id.signupuserpassword2) ;
-        signup_email = (EditText)view.findViewById(R.id.signupuseremail) ;
+       //Dialog.Builder mybuilder  = new AlertDialog.Builder(getApplicationContext());
+        Dialog signup = new Dialog(getApplicationContext()) ;
+        signup.setContentView(R.layout.signup);
 
 
 
 
-        AlertDialog signup = mybuilder.create();
+        signup_button = (Button)signup.findViewById(R.id.signupbutton) ;
+        signup_password = (EditText)signup.findViewById(R.id.signupuserpassword) ;
+        signup_password2 = (EditText)signup.findViewById(R.id.signupuserpassword2) ;
+        signup_email = (EditText)signup.findViewById(R.id.signupuseremail) ;
 
-         signup.show();
+
+
+
+       signup.show();
 
 
     }
