@@ -1,7 +1,6 @@
 package com.z2p.devops.cashit;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -60,7 +59,7 @@ public class Login extends AppCompatActivity {
                 }
 
 
-                if (password.getText().toString().length()<7){
+                if (password.getText().toString().length()<=8){
                     password.setError("Must containt 8 caracters");
                     check_email_password=false;
                 }
@@ -76,8 +75,6 @@ public class Login extends AppCompatActivity {
                                     Log.d("user", "signInWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Toast.makeText(getApplicationContext(),user.getEmail(),Toast.LENGTH_LONG).show();
-                                    Intent myintent  = new Intent(getApplicationContext(),MainActivity.class);
-                                    startActivity(myintent);
 
                                 } else {
                                     // If sign in fails, display a message to the user.
