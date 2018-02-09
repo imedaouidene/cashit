@@ -40,7 +40,7 @@
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:id="@+id/signupbutton"
-        android:text="@string/login"
+        android:text="@string/signup"
         android:layout_marginTop="35dp"
         android:textSize="16dp"
         android:background="@color/orange"
