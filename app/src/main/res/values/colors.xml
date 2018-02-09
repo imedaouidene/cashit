@@ -16,6 +16,8 @@
     <color name="reviewcolor">#09fab17c</color>
     <color name="yellow">#ffff0b</color>
     <color name="green">#a5b1</color>
-
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
 
 </resources>
