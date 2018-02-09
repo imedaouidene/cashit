@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
         login = (Button)findViewById(R.id.LoginButton) ;
         email = (EditText)findViewById(R.id.useremail) ;
         password = (EditText)findViewById(R.id.userpassword) ;
-        signup = (TextView)findViewById(R.id.signupbutton) ;
+        signup = (TextView)findViewById(R.id.newaccount) ;
 
         email.setText("momo@momo.com");
         password.setText("momo123");
@@ -116,12 +116,31 @@ public class Login extends AppCompatActivity {
 
     }
 
+    EditText signup_email,signup_password,signup_password2 ;
+    Button signup_button ;
+
     private void showsignup() {
 
         AlertDialog.Builder mybuilder  = new AlertDialog.Builder(getApplicationContext());
 
         LayoutInflater inflater = (LayoutInflater)getApplicationContext().getSystemService (Context.LAYOUT_INFLATER_SERVICE) ;
-        View view
+        View view= inflater.inflate(R.layout.signup,null) ;
+        mybuilder.setView(view) ;
+
+
+        signup_button = (Button)view.findViewById(R.id.signupbutton) ;
+        signup_password = (EditText)view.findViewById(R.id.signupuserpassword) ;
+        signup_password2 = (EditText)view.findViewById(R.id.signupuserpassword2) ;
+        signup_email = (EditText)view.findViewById(R.id.signupuseremail) ;
+
+
+
+
+        AlertDialog signup = mybuilder.create();
+
+         signup.show();
+
+
     }
 
     @Override
