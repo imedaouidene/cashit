@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
         signup = (TextView)findViewById(R.id.newaccount) ;
 
         email.setText("momo@momo.com");
-        password.setText("momo123");
+        password.setText("momo1234");
 
 
 
